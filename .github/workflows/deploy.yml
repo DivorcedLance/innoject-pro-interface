@@ -28,6 +28,10 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      # ---- Agregado: workaround rollup ----
+      - name: Reinstall rollup native module (workaround)
+        run: npm install rollup --force
+
       - name: Build project
         run: npm run build
 
