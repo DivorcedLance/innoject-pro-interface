@@ -1,69 +1,126 @@
-# React + TypeScript + Vite
+# Innoject Pro UI – React Demo
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Interfaz de usuario demo para máquina Innoject Pro, inspirada en pantalla táctil de tamaño fijo (1338x768 px).  
+Incluye navegación, teclado numérico (NumPad) emergente tipo POS/industria, y componentes UI customizados.  
+**Ideal para prototipos industriales, kioskos y hardware embebido.**
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Características
 
-## Expanding the ESLint configuration
+- **Resolución fija:** Toda la interfaz está contenida en un área de 1338x768 px.
+- **Teclado numérico personalizado:** Aparece desde la izquierda o derecha sobre la app, nunca fuera del área blanca.
+- **Contexto global de NumPad:** Llama al teclado desde cualquier input usando un simple hook.
+- **Navegación tipo app:** Usando [React Router](https://reactrouter.com/), sin recargas.
+- **Componentes estilizados:** Basados en TailwindCSS para velocidad y consistencia visual.
+- **No responsive:** Optimizado para hardware específico o simuladores.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🖥️ Instalación
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+1. **Clona el repositorio**
+   ```sh
+   git clone https://github.com/tu-usuario/innoject-ui-demo.git
+   cd innoject-ui-demo
+   ```
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+2. **Instala dependencias**
+
+   ```sh
+   npm install
+   # o
+   yarn
+   ```
+
+3. **Arranca la app**
+
+   ```sh
+   npm run dev
+   # o
+   yarn dev
+   ```
+
+4. **Abre en tu navegador**
+
+   * Navega a `http://localhost:5173` (Vite por defecto).
+   * Verás la interfaz simulando la máquina.
+
+---
+
+## 🧩 Estructura del Proyecto
+
+```
+src/
+  components/
+    Counter.tsx
+    Numpad.tsx
+    icons/
+  contexts/
+    NumpadContext.ts
+    NumpadProvider.tsx
+    useNumpad.ts
+  views/
+    Home.tsx
+    WifiSettings.tsx
+    TestSyringe.tsx
+    Settings.tsx
+  assets/
+    # imágenes y SVGs
+  App.tsx
+  main.tsx
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 📝 Uso del NumPad desde cualquier input
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```tsx
+import { useNumpad } from '../contexts/useNumpad';
+
+const { openNumpad } = useNumpad();
+
+const handleInput = () => {
+  openNumpad({
+    initialValue: valorActual,
+    side: 'left', // o 'right'
+    onEnter: newValue => setValorActual(newValue),
+  });
+};
 ```
+
+El NumPad aparecerá pegado al borde izquierdo o derecho del área blanca, no del navegador.
+
+---
+
+## 🛠️ Personalización
+
+* **Pantalla fija:** Cambia los valores de `w-[1338px] h-[768px]` si usas otra resolución.
+* **Animación del NumPad:** Se controla con Framer Motion en `Numpad.tsx`.
+* **Estilos:** Todo con TailwindCSS.
+* **Navegación:** Puedes agregar más rutas fácilmente en `App.tsx`.
+
+---
+
+## 🧪 Requisitos
+
+* Node.js 18+
+* NPM 9+ o Yarn
+* [Vite](https://vitejs.dev/) (ya incluido como dev dependency)
+* TailwindCSS
+* Framer Motion
+
+---
+
+## 🤝 Aportes
+
+¿Ideas, mejoras, o quieres integrar con hardware real?
+¡Haz un fork o abre un Issue!
+
+---
+
+## 📄 Licencia
+
+MIT
+
+---
