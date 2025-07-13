@@ -4,3 +4,12 @@
 @theme {
   --font-sans: "Inter", "sans-serif"; 
 }
+
+@keyframes shrink {
+  from { width: 100%; }
+  to { width: 0%; }
+}
+
+.animate-shrink {
+  animation: shrink var(--duration, 5000ms) linear forwards;
+}
