@@ -391,12 +391,26 @@ const Settings = () => {
 
   const startDesinfection = () => {
     showToast({
-      message: "Iniciando desinfección...",
+      message: selectedLanguage.code === "en"
+        ? "Disinfection started"
+        : "Desinfección iniciada",
       icon: CheckCircle,
       type: "success",
       duration: 2000,
       position: "bottom-left",
     });
+
+    setTimeout(() => {
+      showToast({
+        message: selectedLanguage.code === "en"
+          ? "Disinfection completed"
+          : "Desinfección completada",
+        icon: CheckCircle,
+        type: "success",
+        duration: 2000,
+        position: "bottom-left",
+      });
+    }, 3000); // Simula un tiempo de desinfección de 3 segundos
   };
 
   const getPageTitle = () => {
