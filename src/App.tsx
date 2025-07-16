@@ -7,15 +7,13 @@ import TestSyringe from "./views/TestSyringe";
 import { useToast } from "./contexts/useToast";
 import { Toast } from "./components/Toast";
 import { LanguageProvider } from "./contexts/LanguageProvider";
+import { ResponsiveContainer } from "./components/ResponsiveContainer";
 
 function App() {
   const { toasts, removeToast } = useToast();
   return (
-    <div className="min-h-screen min-w-full w-full h-full flex items-center justify-center bg-black">
-      <div
-        className="w-[1338px] h-[768px] bg-white mx-auto my-0 flex flex-col overflow-auto relative"
-        style={{ boxSizing: "content-box" }}
-      >
+    <div className="w-full h-screen flex items-center justify-center bg-black p-4">
+      <ResponsiveContainer>
         <LanguageProvider>
           <NumpadProvider>
             <Routes>
@@ -38,7 +36,7 @@ function App() {
             onClose={() => removeToast(toast.id)}
           />
         ))}
-      </div>
+      </ResponsiveContainer>
     </div>
   );
 }
