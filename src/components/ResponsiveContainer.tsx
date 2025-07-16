@@ -5,36 +5,73 @@ export const ResponsiveContainer = ({
 }: {
   children: React.ReactNode;
 }) => {
-  const [scale, setScale] = useState(1);
+  const [containerDimensions, setContainerDimensions] = useState({
+    width: 1338,
+    height: 768,
+  });
 
+  // Dimensiones originales
+  const originalWidth = 1338;
+  const originalHeight = 768;
+  const aspectRatio = originalWidth / originalHeight; // 1.7421875
+
+  // Calcular dimensiones que mantengan el aspect ratio
   useEffect(() => {
-    const calculateScale = () => {
+    const calculateDimensions = () => {
       const viewportWidth = window.innerWidth;
       const viewportHeight = window.innerHeight;
 
-      const scaleX = (viewportWidth - 40) / 1338; // 40px margen
-      const scaleY = (viewportHeight - 40) / 768;
+      // Margen para evitar que toque los bordes
+      const margin = 20;
+      const availableWidth = viewportWidth - margin * 2;
+      const availableHeight = viewportHeight - margin * 2;
 
-      const newScale = Math.min(scaleX, scaleY, 1);
-      setScale(newScale);
+      // Calcular dimensiones manteniendo aspect ratio
+      let finalWidth, finalHeight;
+
+      if (availableWidth / availableHeight > aspectRatio) {
+        // La pantalla es más ancha que nuestro aspect ratio
+        finalHeight = Math.min(availableHeight, originalHeight);
+        finalWidth = finalHeight * aspectRatio;
+      } else {
+        // La pantalla es más alta que nuestro aspect ratio
+        finalWidth = Math.min(availableWidth, originalWidth);
+        finalHeight = finalWidth / aspectRatio;
+      }
+
+      setContainerDimensions({ width: finalWidth, height: finalHeight });
     };
 
-    calculateScale();
-    window.addEventListener("resize", calculateScale);
-    return () => window.removeEventListener("resize", calculateScale);
+    calculateDimensions();
+    window.addEventListener("resize", calculateDimensions);
+
+    return () => window.removeEventListener("resize", calculateDimensions);
   }, []);
 
   return (
-    <div
-      className="w-[1338px] h-[768px] bg-white mx-auto my-0 flex flex-col overflow-auto relative"
-      style={{
-        boxSizing: "content-box",
-        transform: `scale(${scale})`,
-        transformOrigin: "center center",
-        transition: "transform 0.3s ease",
-      }}
-    >
-      {children}
+    <div className="w-full min-h-screen bg-black flex items-center justify-center p-2">
+      <div
+        className="bg-white shadow-lg relative overflow-hidden"
+        style={{
+          width: `${containerDimensions.width}px`,
+          height: `${containerDimensions.height}px`,
+          maxWidth: "100vw",
+          maxHeight: "100vh",
+          transition: "all 0.3s ease",
+        }}
+      >
+        <div
+          className="w-full h-full flex flex-col"
+          style={{
+            transform: `scale(${containerDimensions.width / originalWidth})`,
+            transformOrigin: "top left",
+            width: `${originalWidth}px`,
+            height: `${originalHeight}px`,
+          }}
+        >
+          {children}
+        </div>
+      </div>
     </div>
   );
 };
