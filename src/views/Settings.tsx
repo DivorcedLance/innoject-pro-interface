@@ -10,7 +10,7 @@ import keyIcon from "../assets/key.svg";
 import playIcon from "../assets/play.svg";
 import playWhiteIcon from "../assets/play-white.svg";
 import { useToast } from "../contexts/useToast";
-import { Check, CheckCircle } from "lucide-react";
+import { CheckCircle } from "lucide-react";
 import { useLanguage } from "../contexts/useLanguage";
 
 const BG = "bg-[#BDE6F3]";
@@ -28,17 +28,6 @@ const BIG_INPUT =
 const INPUT_SIZE = "w-[140px] h-[100px] text-4xl";
 
 const CORRECT_PASSWORD = "1234";
-
-type Language = {
-  code: string;
-  name: string;
-  flag: string;
-};
-
-const LANGUAGES: Language[] = [
-  { code: "en", name: "English", flag: "🇺🇸" },
-  { code: "es", name: "Español", flag: "🇪🇸" },
-];
 
 type Setting = {
   label: {
@@ -185,7 +174,7 @@ const page3Settings = (
 
 const Settings = () => {
   const { showToast } = useToast();
-  const { selectedLanguage, setSelectedLanguage } = useLanguage();
+  const { selectedLanguage } = useLanguage();
   const navigate = useNavigate();
   const { openNumpad } = useNumpad();
 
@@ -362,20 +351,6 @@ const Settings = () => {
   if (page === 3)
     settings = page3Settings(shots9, setShots9, shots10, setShots10);
 
-  // Función para cambiar idioma
-  const handleLanguageChange = (languageCode: string) => {
-    setSelectedLanguage(languageCode);
-    showToast({
-      message: `Idioma cambiado a ${
-        LANGUAGES.find((lang) => lang.code === languageCode)?.name
-      }`,
-      icon: CheckCircle,
-      type: "success",
-      duration: 2000,
-      position: "bottom-center",
-    });
-  };
-
   // Abre el teclado por el lado adecuado
   const openInputNumpad = (
     value: string,
@@ -391,9 +366,10 @@ const Settings = () => {
 
   const startDesinfection = () => {
     showToast({
-      message: selectedLanguage.code === "en"
-        ? "Disinfection started"
-        : "Desinfección iniciada",
+      message:
+        selectedLanguage.code === "en"
+          ? "Disinfection started"
+          : "Desinfección iniciada",
       icon: CheckCircle,
       type: "success",
       duration: 2000,
@@ -402,9 +378,10 @@ const Settings = () => {
 
     setTimeout(() => {
       showToast({
-        message: selectedLanguage.code === "en"
-          ? "Disinfection completed"
-          : "Desinfección completada",
+        message:
+          selectedLanguage.code === "en"
+            ? "Disinfection completed"
+            : "Desinfección completada",
         icon: CheckCircle,
         type: "success",
         duration: 2000,
@@ -425,10 +402,6 @@ const Settings = () => {
         return selectedLanguage.code === "en"
           ? "NEEDLES DISINFECTION"
           : "DESINFECCIÓN DE AGUJAS";
-      case 5:
-        return selectedLanguage.code === "en"
-          ? "LANGUAGE SETTINGS"
-          : "AJUSTES DE IDIOMA";
       default:
         return "SETUP";
     }
@@ -442,14 +415,12 @@ const Settings = () => {
       {/* Barra superior */}
       <div className="flex items-center bg-gray-200 h-[90px] px-8 py-20 justify-between">
         <div className="flex flex-row items-center gap-8">
-          {page > 1 && (
-            <button
-              onClick={() => setPage(page - 1)}
-              className="focus:outline-none cursor-pointer"
-            >
-              <img src={arrowLeftIcon} alt="Prev" className="w-16 h-16" />
-            </button>
-          )}
+          <button
+            onClick={() => setPage(page === 1 ? 4 : page - 1)}
+            className="focus:outline-none cursor-pointer"
+          >
+            <img src={arrowLeftIcon} alt="Prev" className="w-16 h-16" />
+          </button>
           <button
             onClick={() => navigate("/")}
             className="focus:outline-none cursor-pointer"
@@ -461,15 +432,12 @@ const Settings = () => {
           {getPageTitle()}
         </span>
         <div className="flex flex-row items-center gap-8">
-          {page < 5 && (
-            <button
-              onClick={() => setPage(page + 1)}
-              className="focus:outline-none cursor-pointer"
-            >
-              <img src={arrowRightIcon} alt="Next" className="w-16 h-16" />
-            </button>
-          )}
-          {/* Llave abajo derecha solo en page 3 */}
+          <button
+            onClick={() => setPage(page === 4 ? 1 : page + 1)}
+            className="focus:outline-none cursor-pointer"
+          >
+            <img src={arrowRightIcon} alt="Next" className="w-16 h-16" />
+          </button>
         </div>
       </div>
 
@@ -541,10 +509,6 @@ const Settings = () => {
                   checked={enable2}
                   onChange={setEnable2}
                 />
-              </div>
-              {/* Llave abajo derecha */}
-              <div className="border-8 border-black rounded-full w-24 h-24 absolute right-10 bottom-5 z-20 flex items-center justify-center">
-                <img src={keyIcon} alt="Key" className="w-18 h-18" />
               </div>
             </>
           )}
@@ -685,30 +649,6 @@ const Settings = () => {
           </div>
         </div>
       )}
-
-      {/* Página 5: Language Settings */}
-      {page === 5 && (
-        <div className="flex-1 flex flex-col items-center justify-center gap-8">
-          <div className="flex flex-col gap-6 w-full max-w-[800px] px-16">
-            <h2 className="text-4xl font-bold text-center text-gray-800 mb-8">
-              {selectedLanguage.code === "en"
-                ? "Select Your Preferred Language"
-                : "Seleccione su idioma preferido"}
-            </h2>
-
-            <div className="flex flex-col gap-4">
-              {LANGUAGES.map((language) => (
-                <LanguageOption
-                  key={language.code}
-                  language={language}
-                  isSelected={selectedLanguage.code === language.code}
-                  onSelect={() => handleLanguageChange(language.code)}
-                />
-              ))}
-            </div>
-          </div>
-        </div>
-      )}
     </div>
   );
 };
@@ -766,44 +706,6 @@ function SettingSwitch({
           />
         </div>
       </div>
-    </div>
-  );
-}
-
-function LanguageOption({
-  language,
-  isSelected,
-  onSelect,
-}: {
-  language: Language;
-  isSelected: boolean;
-  onSelect: () => void;
-}) {
-  return (
-    <div
-      className={`
-        flex items-center justify-between px-12 py-8 rounded-[40px] cursor-pointer
-        transition-all duration-200 hover:scale-[1.02] active:scale-[0.98]
-        ${
-          isSelected
-            ? "bg-blue-100 border-4 border-blue-400 shadow-lg"
-            : "bg-gray-100 border-4 border-gray-300 hover:bg-gray-200"
-        }
-      `}
-      onClick={onSelect}
-    >
-      <div className="flex items-center gap-6">
-        <span className="text-5xl">{language.flag}</span>
-        <span className="text-3xl font-bold text-gray-800">
-          {language.name}
-        </span>
-      </div>
-
-      {isSelected && (
-        <div className="flex items-center justify-center w-12 h-12 bg-blue-500 rounded-full">
-          <Check className="w-8 h-8 text-white" strokeWidth={3} />
-        </div>
-      )}
     </div>
   );
 }

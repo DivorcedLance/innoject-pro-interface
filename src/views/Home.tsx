@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { Counter } from "../components/Counter";
 import msdLogo from "../assets/msd-animal-health-logo.png";
 import syringeIcon from "../assets/syringe.svg";
+import languageIcon from "../assets/languages.svg";
 //import wifiIcon from '../assets/wifi.svg';
 import gearIcon from "../assets/settings.svg";
 import { useToast } from "../contexts/useToast";
@@ -116,6 +117,13 @@ const Home = () => {
           className="p-4 rounded focus:outline-none cursor-pointer transition-transform duration-150 hover:scale-110 active:scale-115 active:translate-y-1"
         >
           <img src={syringeIcon} alt="Syringe" className="w-20 h-20" />
+        </button>
+        <button
+          onClick={() => navigate("/language")}
+          aria-label="Language Settings"
+          className="p-4 rounded focus:outline-none cursor-pointer transition-transform duration-150 hover:scale-110 active:scale-115 active:translate-y-1"
+        >
+          <img src={languageIcon} alt="Language" className="w-20 h-20" />
         </button>
       </div>
     </div>

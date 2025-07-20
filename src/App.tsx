@@ -8,6 +8,7 @@ import { useToast } from "./contexts/useToast";
 import { Toast } from "./components/Toast";
 import { LanguageProvider } from "./contexts/LanguageProvider";
 import { ResponsiveContainer } from "./components/ResponsiveContainer";
+import Languages from "./views/Languages";
 
 function App() {
   const { toasts, removeToast } = useToast();
@@ -21,6 +22,7 @@ function App() {
             {/*             <Route path="/wifi" element={<WifiSettings />} />
              */}{" "}
             <Route path="/testsyringe" element={<TestSyringe />} />
+            <Route path="/language" element={<Languages />} />
             {/* Redirección para rutas desconocidas */}
             <Route path="*" element={<Navigate to="/" />} />
           </Routes>

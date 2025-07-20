@@ -6,6 +6,7 @@ import dropletsBlue from "../assets/droplets-blue.svg";
 import dropletsYellow from "../assets/droplets-yellow.svg";
 import { useToast } from "../contexts/useToast";
 import { useLanguage } from "../contexts/useLanguage";
+import { useState } from "react";
 
 const BG = "bg-[#BDE6F3]";
 
@@ -48,17 +49,36 @@ const TestSyringe = () => {
   const navigate = useNavigate();
   const { showToast } = useToast();
   const { selectedLanguage } = useLanguage();
+  const [disabled, setDisabled] = useState(false);
 
-  const handleTestClick = (label: string) => {
+  const handleTestClick = async (item: (typeof testList)[number]) => {
     showToast({
-      message:
-        selectedLanguage.code === "en"
-          ? `Starting: ${label}`
-          : `Iniciando: ${label}`,
+      message: `${
+        selectedLanguage.code === "en" ? "Starting test" : "Iniciando prueba"
+      }: ${item.label[selectedLanguage.code as keyof typeof item.label]} (${
+        item.sub
+      })`,
       type: "info",
       duration: 2000,
       position: "bottom-center",
     });
+
+    setDisabled(true);
+    await new Promise((resolve) =>
+      setTimeout(resolve, item.sub === "SINGOL" ? 3000 : 5000)
+    );
+
+    showToast({
+      message: `${
+        selectedLanguage.code === "en" ? "Test completed" : "Prueba completada"
+      }: ${item.label[selectedLanguage.code as keyof typeof item.label]} (${
+        item.sub
+      })`,
+      type: "success",
+      duration: 2000,
+      position: "bottom-center",
+    });
+    setDisabled(false);
   };
 
   return (
@@ -95,12 +115,12 @@ const TestSyringe = () => {
                 hover:scale-105 hover:shadow-2xl
                 active:scale-110 active:shadow-xl
                 cursor-pointer
+                ${disabled ? "opacity-80 cursor-not-allowed" : ""}
               `}
-              onClick={() =>
-                handleTestClick(
-                  item.label[selectedLanguage.code as keyof typeof item.label]
-                )
-              }
+              onClick={() => {
+                if (disabled) return;
+                handleTestClick(item);
+              }}
             >
               <div>
                 <div className="text-2xl font-extrabold">
