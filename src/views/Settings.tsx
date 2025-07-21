@@ -23,7 +23,7 @@ const RESET_BTN =
 
 // Para la página 4:
 const BOX_BIG = `${BG} rounded-[40px] px-10 py-6 flex flex-row items-center w-[470px]`;
-const LABEL = "text-2xl font-semibold text-center mb-3";
+//const LABEL = "text-2xl font-semibold text-center mb-3";
 const BIG_INPUT =
   "rounded-full bg-white font-extrabold text-center text-5xl w-[240px] h-[78px] cursor-pointer border-none focus:outline-none";
 const INPUT_SIZE = "w-[140px] h-[100px] text-4xl";
