@@ -7,9 +7,15 @@ interface CounterProps {
   label: string;
   count: number | string;
   onReset?: () => void;
+  icon?: string; // Icon URL or path
 }
 
-export const Counter: React.FC<CounterProps> = ({ label, count, onReset }) => {
+export const Counter: React.FC<CounterProps> = ({
+  label,
+  count,
+  onReset,
+  icon,
+}) => {
   const [isHolding, setIsHolding] = useState(false);
   const timeoutRef = useRef<number | null>(null);
 
@@ -48,8 +54,8 @@ export const Counter: React.FC<CounterProps> = ({ label, count, onReset }) => {
 
   return (
     <div className="flex flex-col items-center bg-[#D9D9D9] rounded-3xl p-6 w-[340px] h-[370px] shadow-sm relative">
-      <div className="text-3xl text-black font-medium mt-8 text-center">
-        {label}
+      <div className="text-3xl text-black font-medium mt-4 aspect-square flex items-center justify-center text-center">
+        {icon && <img src={icon} alt={label} className="w-24" />}
       </div>
       <div className="flex-1 flex items-center justify-center">
         <div className="bg-white rounded-2xl flex items-center justify-center w-[260px] h-[110px]">

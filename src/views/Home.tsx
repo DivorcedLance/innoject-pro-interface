@@ -9,6 +9,7 @@ import gearIcon from "../assets/settings.svg";
 import { useToast } from "../contexts/useToast";
 import { useLanguage } from "../contexts/useLanguage";
 import { CheckCircle } from "lucide-react";
+import { settingIcons } from "../components/icons/SettingsIcons";
 
 const SCREEN_WIDTH = 1338;
 const SCREEN_HEIGHT = 768;
@@ -79,6 +80,7 @@ const Home = () => {
           }
           count={partial}
           onReset={() => setPartial(0)}
+          icon={settingIcons.partialCounter}
         />
         <Counter
           label={
@@ -86,12 +88,14 @@ const Home = () => {
           }
           count={daily}
           onReset={() => setDaily(0)}
+          icon={settingIcons.dailyCounter}
         />
         <Counter
           label={
             selectedLanguage.code === "en" ? "Total Counter" : "Contador Total"
           }
           count={total}
+          icon={settingIcons.totalCounter}
         />
       </div>
 

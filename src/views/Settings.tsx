@@ -12,19 +12,20 @@ import playWhiteIcon from "../assets/play-white.svg";
 import { useToast } from "../contexts/useToast";
 import { CheckCircle } from "lucide-react";
 import { useLanguage } from "../contexts/useLanguage";
+import { settingIcons } from "../components/icons/SettingsIcons";
 
 const BG = "bg-[#BDE6F3]";
-const BOX = `${BG} rounded-[40px] px-8 py-6 flex flex-col items-center w-[420px] h-[260px]`;
+const BOX = `${BG} rounded-[40px] px-8 py-6 flex flex-row items-center w-[420px] h-[260px]`;
 const INPUT_STYLE =
   "rounded-full bg-white font-extrabold text-center text-5xl w-[210px] h-[92px] cursor-pointer border-none focus:outline-none";
 const RESET_BTN =
   "absolute bottom-5 right-7 w-10 h-10 cursor-pointer hover:scale-110 active:scale-105 transition";
 
 // Para la página 4:
-const BOX_BIG = `${BG} rounded-[40px] px-10 py-6 flex flex-col items-center w-[470px]`;
+const BOX_BIG = `${BG} rounded-[40px] px-10 py-6 flex flex-row items-center w-[470px]`;
 const LABEL = "text-2xl font-semibold text-center mb-3";
 const BIG_INPUT =
-  "rounded-full bg-white font-extrabold text-center text-5xl w-[320px] h-[78px] cursor-pointer border-none focus:outline-none";
+  "rounded-full bg-white font-extrabold text-center text-5xl w-[240px] h-[78px] cursor-pointer border-none focus:outline-none";
 const INPUT_SIZE = "w-[140px] h-[100px] text-4xl";
 
 const CORRECT_PASSWORD = "1234";
@@ -38,6 +39,7 @@ type Setting = {
   value: string;
   setValue: (v: string) => void;
   side: "left" | "right";
+  icon?: string;
 };
 
 const page1Settings = (
@@ -59,6 +61,7 @@ const page1Settings = (
     value: shots1,
     setValue: setShots1,
     side: "right",
+    icon: settingIcons.delayPress,
   },
   {
     label: {
@@ -69,6 +72,7 @@ const page1Settings = (
     value: shots2,
     setValue: setShots2,
     side: "left",
+    icon: settingIcons.delayInjectionOily,
   },
   {
     label: {
@@ -79,6 +83,7 @@ const page1Settings = (
     value: shots3,
     setValue: setShots3,
     side: "right",
+    icon: settingIcons.delayInjectionWater,
   },
   {
     label: {
@@ -89,6 +94,7 @@ const page1Settings = (
     value: shots4,
     setValue: setShots4,
     side: "left",
+    icon: settingIcons.timingInjection12,
   },
 ];
 
@@ -111,6 +117,7 @@ const page2Settings = (
     value: shots5,
     setValue: setShots5,
     side: "right",
+    icon: settingIcons.timingInjection345,
   },
   {
     label: {
@@ -121,6 +128,7 @@ const page2Settings = (
     value: shots6,
     setValue: setShots6,
     side: "left",
+    icon: settingIcons.delayNeedles,
   },
   {
     label: {
@@ -131,6 +139,7 @@ const page2Settings = (
     value: shots7,
     setValue: setShots7,
     side: "right",
+    icon: settingIcons.buzzer,
   },
   {
     label: {
@@ -141,6 +150,7 @@ const page2Settings = (
     value: shots8,
     setValue: setShots8,
     side: "left",
+    icon: settingIcons.delayClosing,
   },
 ];
 
@@ -159,6 +169,7 @@ const page3Settings = (
     value: shots9,
     setValue: setShots9,
     side: "right",
+    icon: settingIcons.timeClosing,
   },
   {
     label: {
@@ -169,6 +180,7 @@ const page3Settings = (
     value: shots10,
     setValue: setShots10,
     side: "left",
+    icon: settingIcons.numeroPollos,
   },
 ];
 
@@ -450,15 +462,10 @@ const Settings = () => {
             {settings.map((setting, idx) => (
               <div key={idx} className="relative">
                 <div className={BOX}>
-                  {/* Altura fija para el label */}
-                  <span className="text-2xl font-semibold text-center mb-3 h-[56px] flex items-center justify-center">
-                    {
-                      setting.label[
-                        selectedLanguage.code as keyof typeof setting.label
-                      ]
-                    }
-                  </span>
-                  <div className="flex flex-row items-center gap-3 mt-2 w-full">
+                  <div className="w-[40%] pr-4">
+                    <img src={setting.icon || ""} alt={setting.label.en} />
+                  </div>
+                  <div className="flex flex-col items-center gap-3 mt-2 w-[60%]">
                     <input
                       className={INPUT_STYLE + " w-32 flex-shrink-0"}
                       value={setting.value}
@@ -490,7 +497,7 @@ const Settings = () => {
           {/* Switches de la página 3 */}
           {page === 3 && (
             <>
-              <div className="flex flex-col gap-6 w-full px-32 my-6">
+              <div className="flex flex-row gap-16 mx-auto my-6">
                 <SettingSwitch
                   label={
                     selectedLanguage.code === "en"
@@ -499,6 +506,7 @@ const Settings = () => {
                   }
                   checked={enable1}
                   onChange={setEnable1}
+                  icon={settingIcons.habilitarJeringas12}
                 />
                 <SettingSwitch
                   label={
@@ -508,6 +516,7 @@ const Settings = () => {
                   }
                   checked={enable2}
                   onChange={setEnable2}
+                  icon={settingIcons.habilitarJeringas345}
                 />
               </div>
             </>
@@ -522,32 +531,48 @@ const Settings = () => {
           <div className="grid grid-cols-2 gap-4 items-center">
             {/* Counter */}
             <div className={BOX_BIG}>
-              <span className={LABEL}>
+              <div className="w-[40%] flex items-center justify-center">
+                <img
+                  src={settingIcons.cycleCounter}
+                  alt="Cycle Counter"
+                  className="w-28"
+                />
+              </div>
+              {/* <span className={LABEL}>
                 {selectedLanguage.code === "en"
                   ? "Cycle Counter"
                   : "Contador de Ciclos"}
-              </span>
-              <input
-                className={BIG_INPUT}
-                value={cycleCounter}
-                readOnly
-                onClick={() =>
-                  openNumpad({
-                    initialValue: cycleCounter,
-                    side: "right",
-                    onEnter: setCycleCounter,
-                  })
-                }
-              />
+              </span> */}
+              <div className="w-[60%]">
+                <input
+                  className={BIG_INPUT}
+                  value={cycleCounter}
+                  readOnly
+                  onClick={() =>
+                    openNumpad({
+                      initialValue: cycleCounter,
+                      side: "right",
+                      onEnter: setCycleCounter,
+                    })
+                  }
+                />
+              </div>
             </div>
             {/* Disinfection Cycle */}
             <div className={BOX_BIG}>
-              <span className={LABEL}>
+              {/* <span className={LABEL}>
                 {selectedLanguage.code === "en"
                   ? "Disinfection Cycle"
                   : "Ciclo de Desinfección"}
-              </span>
-              <div className="flex flex-row items-center">
+              </span> */}
+              <div className="w-[40%] flex items-center justify-center">
+                <img
+                  src={settingIcons.disinfectionCycle}
+                  alt="Disinfection Cycle"
+                  className="w-28"
+                />
+              </div>
+              <div className="w-[60%] flex flex-col items-center justify-center">
                 <input
                   className={BIG_INPUT}
                   value={disinfectionCycle}
@@ -560,17 +585,24 @@ const Settings = () => {
                     })
                   }
                 />
-                <span className="ml-5 text-2xl font-normal">Num.</span>
+                <span className="text-2xl font-normal">Num.</span>
               </div>
             </div>
             {/* Timer */}
             <div className={BOX_BIG}>
-              <span className={LABEL}>
+              {/* <span className={LABEL}>
                 {selectedLanguage.code === "en"
                   ? "Disinfection Timer"
                   : "Temporizador de Desinfección"}
-              </span>
-              <div className="flex flex-row items-center">
+              </span> */}
+              <div className="w-[40%] flex items-center justify-center">
+                <img
+                  src={settingIcons.disinfectionTimer}
+                  alt="Disinfection Timer"
+                  className="w-28"
+                />
+              </div>
+              <div className="w-[60%] flex flex-col items-center justify-center">
                 <input
                   className={BIG_INPUT}
                   value={timer}
@@ -583,7 +615,7 @@ const Settings = () => {
                     })
                   }
                 />
-                <span className="ml-5 text-2xl font-normal">Sec.</span>
+                <span className="text-2xl font-normal">Sec.</span>
               </div>
             </div>
 
@@ -605,11 +637,18 @@ const Settings = () => {
             <div
               className={`col-span-2 ${BG} rounded-[40px] px-12 py-4 flex items-center justify-between min-w-[460px] shadow-xl`}
             >
-              <span className="text-3xl font-bold max-w-1/4 text-wrap">
+              <div className="max-w-1/4">
+                <img
+                  src={settingIcons.syringesCleaning}
+                  alt="Syringes Cleaning"
+                  className="w-36"
+                />
+              </div>
+              {/* <span className="text-3xl font-bold max-w-1/4 text-wrap">
                 {selectedLanguage.code === "en"
                   ? "SYRINGES CLEANING"
                   : "LIMPIEZA DE JERINGAS"}
-              </span>
+              </span> */}
               <div className="flex flex-row items-center gap-3">
                 <div className="border-4 border-white rounded-3xl p-1 shadow transition-transform duration-150 hover:scale-110 active:scale-115 active:translate-y-1">
                   <input
@@ -656,17 +695,19 @@ const Settings = () => {
 function SettingSwitch({
   label,
   checked,
+  icon,
   onChange,
 }: {
   label: string;
   checked: boolean;
+  icon?: string;
   onChange: (v: boolean) => void;
 }) {
   return (
-    <div className="flex flex-row items-center justify-between bg-gray-300 rounded-3xl px-10 py-6 text-2xl font-semibold w-full max-w-[640px] mx-auto">
-      <span>{label}</span>
+    <div className="flex flex-row gap-3 items-center justify-between bg-gray-300 rounded-3xl px-10 py-6 text-2xl font-semibold max-w-[640px]">
+      {icon && <img src={icon} alt={label} className="w-36 inline-block" />}
       <div
-        className="flex items-center cursor-pointer ml-10"
+        className="flex items-center cursor-pointer"
         onClick={() => onChange(!checked)}
       >
         <div
