@@ -1,10 +1,12 @@
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import { useState } from "react";
 
 import homeIcon from "../assets/home.svg";
 import { useToast } from "../contexts/useToast";
-import { Check, CheckCircle } from "lucide-react";
+import { Check, CheckCircle, Bot } from "lucide-react";
 import { useLanguage } from "../contexts/useLanguage";
+import AITranslationModal from "../components/AITranslationModal";
 
 type Language = {
   code: string;
@@ -32,6 +34,7 @@ const Languages = () => {
   const { showToast } = useToast();
   const { selectedLanguage, setSelectedLanguage } = useLanguage();
   const navigate = useNavigate();
+  const [isAIModalOpen, setIsAIModalOpen] = useState(false);
 
   // Función para cambiar idioma
   const handleLanguageChange = (languageCode: string) => {
@@ -66,6 +69,14 @@ const Languages = () => {
         <span className="text-5xl font-extrabold text-gray-900 tracking-wide mx-auto">
           {t('language.title')}
         </span>
+        <button
+          onClick={() => setIsAIModalOpen(true)}
+          className="flex items-center gap-2 px-4 py-2 bg-purple-500 text-white rounded-lg hover:bg-purple-600 transition-colors"
+          title="AI Translation Generator"
+        >
+          <Bot className="w-5 h-5" />
+          <span className="text-sm font-medium">AI Translate</span>
+        </button>
       </div>
 
       {/* Página 5: Language Settings */}
@@ -88,6 +99,12 @@ const Languages = () => {
           </div>
         </div>
       </div>
+
+      {/* AI Translation Modal */}
+      <AITranslationModal 
+        isOpen={isAIModalOpen} 
+        onClose={() => setIsAIModalOpen(false)} 
+      />
     </div>
   );
 };
