@@ -1,0 +1,100 @@
+{
+  "common": {
+    "home": "Startseite",
+    "settings": "Einstellungen",
+    "language": "Sprache",
+    "wifi": "WiFi",
+    "test": "Test",
+    "syringe": "Spritze",
+    "save": "Speichern",
+    "cancel": "Abbrechen",
+    "reset": "Zurücksetzen",
+    "back": "Zurück",
+    "next": "Weiter",
+    "previous": "Vorherige",
+    "confirm": "Bestätigen",
+    "close": "Schließen",
+    "clear": "Löschen",
+    "start": "Starten",
+    "page": "SEITE"
+  },
+  "home": {
+    "title": "Innoject Pro",
+    "partialCounter": "Teilzähler",
+    "dailyCounter": "Tageszähler",
+    "totalCounter": "Gesamtzähler",
+    "injectionReached": "{{count}} Injektionen erreicht"
+  },
+  "settings": {
+    "title": "Einstellungen",
+    "accessTitle": "ZUGANG ZU EINSTELLUNGEN",
+    "enterPassword": "Passwort eingeben",
+    "passwordIncorrect": "Falsches Passwort",
+    "buzzer": "Summer",
+    "cycleCounter": "Zykluszähler",
+    "dailyCounter": "Tageszähler",
+    "delayClosingDropChute": "Verzögerung Schließung Fallschacht",
+    "delayInjectionOily": "Verzögerung Injektion Öliger Impfstoff 1-2",
+    "delayInjectionWaterBase": "Verzögerung Injektion Wasser-Basis Spray 3-4-5",
+    "delayNeedlesExit": "Verzögerung Nadel-Ausgang",
+    "delayPress": "Verzögerung Presse",
+    "disinfectionCycle": "Desinfektionszyklus",
+    "disinfectionTimer": "Desinfektions-Timer",
+    "enableSyringes12": "Spritzen 1-2 aktivieren",
+    "enableSyringes345": "Spritzen 3-4-5 aktivieren",
+    "chickensPerBox": "Anzahl Hühner pro Box",
+    "partialCounter": "Teilzähler",
+    "setupConfiguration": "Setup-Konfiguration",
+    "startDisinfection": "Desinfektion starten",
+    "syringesCleaning": "Spritzen-Reinigung",
+    "syringesTest": "Spritzen-Test",
+    "timeClosingDropChute": "Zeit Schließung Fallschacht",
+    "timingInjection12": "Timing Injektion 1-2",
+    "timingInjection345": "Timing Injektion 3-4-5",
+    "totalCounter": "Gesamtzähler",
+    "needlesDisinfection": "Nadel-Desinfektion",
+    "shots": "Schüsse",
+    "timeCycle": "Zeitzyklen",
+    "disinfectionCycles": "Desinfektionszyklen",
+    "settingsSaved": "Einstellungen erfolgreich gespeichert",
+    "disinfectionStarted": "Desinfektion gestartet",
+    "disinfectionCompleted": "Desinfektion abgeschlossen"
+  },
+  "language": {
+    "title": "Spracheinstellungen",
+    "select": "Sprache auswählen",
+    "changed": "Sprache geändert zu {{language}}"
+  },
+  "testSyringe": {
+    "title": "Spritzen-Test",
+    "instructions": "Drücken Sie die Test-Taste, um die Spritzenfunktionalität zu überprüfen",
+    "testButton": "Spritzen testen",
+    "testing": "Teste...",
+    "success": "Test erfolgreich abgeschlossen",
+    "error": "Test fehlgeschlagen",
+    "test12": "Test 1-2",
+    "test345": "Test 3-4-5",
+    "startingTest": "Test wird gestartet",
+    "testCompleted": "Test abgeschlossen"
+  },
+  "wifi": {
+    "title": "WiFi-Einstellungen",
+    "network": "Netzwerk",
+    "password": "Passwort",
+    "connect": "Verbinden",
+    "disconnect": "Trennen",
+    "connected": "Verbunden",
+    "disconnected": "Getrennt"
+  },
+  "numpad": {
+    "enter": "Eingabe",
+    "clear": "Löschen",
+    "backspace": "Rücktaste"
+  },
+  "toast": {
+    "success": "Erfolg",
+    "error": "Fehler",
+    "warning": "Warnung",
+    "info": "Information"
+  }
+}

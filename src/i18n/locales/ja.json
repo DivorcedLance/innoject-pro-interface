@@ -1,0 +1,100 @@
+{
+  "common": {
+    "home": "ホーム",
+    "settings": "設定",
+    "language": "言語",
+    "wifi": "WiFi",
+    "test": "テスト",
+    "syringe": "注射器",
+    "save": "保存",
+    "cancel": "キャンセル",
+    "reset": "リセット",
+    "back": "戻る",
+    "next": "次へ",
+    "previous": "前へ",
+    "confirm": "確認",
+    "close": "閉じる",
+    "clear": "クリア",
+    "start": "開始",
+    "page": "ページ"
+  },
+  "home": {
+    "title": "Innoject Pro",
+    "partialCounter": "部分カウンター",
+    "dailyCounter": "日次カウンター",
+    "totalCounter": "総カウンター",
+    "injectionReached": "{{count}}回の注射に到達しました"
+  },
+  "settings": {
+    "title": "設定",
+    "accessTitle": "設定へのアクセス",
+    "enterPassword": "パスワードを入力",
+    "passwordIncorrect": "パスワードが間違っています",
+    "buzzer": "ブザー",
+    "cycleCounter": "サイクルカウンター",
+    "dailyCounter": "日次カウンター",
+    "delayClosingDropChute": "落下シュート閉鎖遅延",
+    "delayInjectionOily": "油性ワクチン注射遅延 1-2",
+    "delayInjectionWaterBase": "水ベーススプレー注射遅延 3-4-5",
+    "delayNeedlesExit": "針出口遅延",
+    "delayPress": "プレス遅延",
+    "disinfectionCycle": "消毒サイクル",
+    "disinfectionTimer": "消毒タイマー",
+    "enableSyringes12": "注射器1-2を有効化",
+    "enableSyringes345": "注射器3-4-5を有効化",
+    "chickensPerBox": "ボックス当たりの鶏数",
+    "partialCounter": "部分カウンター",
+    "setupConfiguration": "セットアップ設定",
+    "startDisinfection": "消毒開始",
+    "syringesCleaning": "注射器清掃",
+    "syringesTest": "注射器テスト",
+    "timeClosingDropChute": "落下シュート閉鎖時間",
+    "timingInjection12": "注射タイミング1-2",
+    "timingInjection345": "注射タイミング3-4-5",
+    "totalCounter": "総カウンター",
+    "needlesDisinfection": "針の消毒",
+    "shots": "ショット",
+    "timeCycle": "時間サイクル",
+    "disinfectionCycles": "消毒サイクル",
+    "settingsSaved": "設定が正常に保存されました",
+    "disinfectionStarted": "消毒が開始されました",
+    "disinfectionCompleted": "消毒が完了しました"
+  },
+  "language": {
+    "title": "言語設定",
+    "select": "言語を選択",
+    "changed": "言語を{{language}}に変更しました"
+  },
+  "testSyringe": {
+    "title": "注射器テスト",
+    "instructions": "テストボタンを押して注射器の機能を確認してください",
+    "testButton": "注射器をテスト",
+    "testing": "テスト中...",
+    "success": "テストが正常に完了しました",
+    "error": "テストに失敗しました",
+    "test12": "テスト1-2",
+    "test345": "テスト3-4-5",
+    "startingTest": "テスト開始",
+    "testCompleted": "テスト完了"
+  },
+  "wifi": {
+    "title": "WiFi設定",
+    "network": "ネットワーク",
+    "password": "パスワード",
+    "connect": "接続",
+    "disconnect": "切断",
+    "connected": "接続済み",
+    "disconnected": "切断済み"
+  },
+  "numpad": {
+    "enter": "入力",
+    "clear": "クリア",
+    "backspace": "バックスペース"
+  },
+  "toast": {
+    "success": "成功",
+    "error": "エラー",
+    "warning": "警告",
+    "info": "情報"
+  }
+}

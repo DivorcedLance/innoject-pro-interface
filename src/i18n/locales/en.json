@@ -1,0 +1,100 @@
+{
+  "common": {
+    "home": "Home",
+    "settings": "Settings",
+    "language": "Language",
+    "wifi": "WiFi",
+    "test": "Test",
+    "syringe": "Syringe",
+    "save": "Save",
+    "cancel": "Cancel",
+    "reset": "Reset",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "confirm": "Confirm",
+    "close": "Close",
+    "clear": "Clear",
+    "start": "Start",
+    "page": "PAGE"
+  },
+  "home": {
+    "title": "Innoject Pro",
+    "partialCounter": "Partial Counter",
+    "dailyCounter": "Daily Counter",
+    "totalCounter": "Total Counter",
+    "injectionReached": "Reached {{count}} injections"
+  },
+  "settings": {
+    "title": "Settings",
+    "accessTitle": "ACCESS TO SETTINGS",
+    "enterPassword": "Enter Password",
+    "passwordIncorrect": "Incorrect password",
+    "buzzer": "Buzzer",
+    "cycleCounter": "Cycle Counter",
+    "dailyCounter": "Daily Counter",
+    "delayClosingDropChute": "Delay Closing Drop Chute",
+    "delayInjectionOily": "Delay Injection Oily Vacc. 1-2",
+    "delayInjectionWaterBase": "Delay Injection Water Base Spray 3-4-5",
+    "delayNeedlesExit": "Delay Needles Exit",
+    "delayPress": "Delay Press",
+    "disinfectionCycle": "Disinfection Cycle",
+    "disinfectionTimer": "Disinfection Timer",
+    "enableSyringes12": "Enable Syringes 1-2",
+    "enableSyringes345": "Enable Syringes 3-4-5",
+    "chickensPerBox": "Number of Chickens per Box",
+    "partialCounter": "Partial Counter",
+    "setupConfiguration": "Setup Configuration",
+    "startDisinfection": "Start Disinfection",
+    "syringesCleaning": "Syringes Cleaning",
+    "syringesTest": "Syringes Test",
+    "timeClosingDropChute": "Time Closing Drop Chute",
+    "timingInjection12": "Timing Injection 1-2",
+    "timingInjection345": "Timing Injection 3-4-5",
+    "totalCounter": "Total Counter",
+    "needlesDisinfection": "Needles Disinfection",
+    "shots": "shots",
+    "timeCycle": "Time Cycle",
+    "disinfectionCycles": "Disinfection Cycles",
+    "settingsSaved": "Settings saved successfully",
+    "disinfectionStarted": "Disinfection started",
+    "disinfectionCompleted": "Disinfection completed"
+  },
+  "language": {
+    "title": "Language Settings",
+    "select": "Select Language",
+    "changed": "Language changed to {{language}}"
+  },
+  "testSyringe": {
+    "title": "Test Syringe",
+    "instructions": "Press the test button to check syringe functionality",
+    "testButton": "Test Syringes",
+    "testing": "Testing...",
+    "success": "Test completed successfully",
+    "error": "Test failed",
+    "test12": "Test 1-2",
+    "test345": "Test 3-4-5",
+    "startingTest": "Starting test",
+    "testCompleted": "Test completed"
+  },
+  "wifi": {
+    "title": "WiFi Settings",
+    "network": "Network",
+    "password": "Password",
+    "connect": "Connect",
+    "disconnect": "Disconnect",
+    "connected": "Connected",
+    "disconnected": "Disconnected"
+  },
+  "numpad": {
+    "enter": "Enter",
+    "clear": "Clear",
+    "backspace": "Backspace"
+  },
+  "toast": {
+    "success": "Success",
+    "error": "Error",
+    "warning": "Warning",
+    "info": "Information"
+  }
+}

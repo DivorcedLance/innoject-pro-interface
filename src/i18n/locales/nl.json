@@ -1,0 +1,100 @@
+{
+  "common": {
+    "home": "Start",
+    "settings": "Instellingen",
+    "language": "Taal",
+    "wifi": "WiFi",
+    "test": "Test",
+    "syringe": "Spuit",
+    "save": "Opslaan",
+    "cancel": "Annuleren",
+    "reset": "Reset",
+    "back": "Terug",
+    "next": "Volgende",
+    "previous": "Vorige",
+    "confirm": "Bevestigen",
+    "close": "Sluiten",
+    "clear": "Wissen",
+    "start": "Start",
+    "page": "Pagina"
+  },
+  "home": {
+    "title": "Innoject Pro",
+    "partialCounter": "Gedeeltelijke teller",
+    "dailyCounter": "Dagelijkse teller",
+    "totalCounter": "Totale teller",
+    "injectionReached": "{{count}} injecties bereikt"
+  },
+  "settings": {
+    "title": "Instellingen",
+    "accessTitle": "Toegang tot instellingen",
+    "enterPassword": "Voer wachtwoord in",
+    "passwordIncorrect": "Onjuist wachtwoord",
+    "buzzer": "Zoemer",
+    "cycleCounter": "Cyclusteller",
+    "dailyCounter": "Dagelijkse teller",
+    "delayClosingDropChute": "Vertraging sluiting valkoker",
+    "delayInjectionOily": "Vertraging olie vaccin injectie 1-2",
+    "delayInjectionWaterBase": "Vertraging water spray injectie 3-4-5",
+    "delayNeedlesExit": "Vertraging naald uitgang",
+    "delayPress": "Vertraging pers",
+    "disinfectionCycle": "Desinfectiecyclus",
+    "disinfectionTimer": "Desinfectietimer",
+    "enableSyringes12": "Schakel spuiten 1-2 in",
+    "enableSyringes345": "Schakel spuiten 3-4-5 in",
+    "chickensPerBox": "Kippen per doos",
+    "partialCounter": "Gedeeltelijke teller",
+    "setupConfiguration": "Setup configuratie",
+    "startDisinfection": "Start desinfectie",
+    "syringesCleaning": "Spuiten reiniging",
+    "syringesTest": "Spuiten test",
+    "timeClosingDropChute": "Tijd sluiting valkoker",
+    "timingInjection12": "Timing injectie 1-2",
+    "timingInjection345": "Timing injectie 3-4-5",
+    "totalCounter": "Totale teller",
+    "needlesDisinfection": "Naald desinfectie",
+    "shots": "keer",
+    "timeCycle": "Tijdcyclus",
+    "disinfectionCycles": "Desinfectiecycli",
+    "settingsSaved": "Instellingen succesvol opgeslagen",
+    "disinfectionStarted": "Desinfectie gestart",
+    "disinfectionCompleted": "Desinfectie voltooid"
+  },
+  "language": {
+    "title": "Taalinstellingen",
+    "select": "Selecteer taal",
+    "changed": "Taal gewijzigd naar {{language}}"
+  },
+  "testSyringe": {
+    "title": "Spuit test",
+    "instructions": "Druk op de testknop om de spuitfuncties te controleren",
+    "testButton": "Test spuit",
+    "testing": "Testen...",
+    "success": "Test succesvol voltooid",
+    "error": "Test mislukt",
+    "test12": "Test 1-2",
+    "test345": "Test 3-4-5",
+    "startingTest": "Test starten",
+    "testCompleted": "Test voltooid"
+  },
+  "wifi": {
+    "title": "WiFi instellingen",
+    "network": "Netwerk",
+    "password": "Wachtwoord",
+    "connect": "Verbinden",
+    "disconnect": "Verbinding verbreken",
+    "connected": "Verbonden",
+    "disconnected": "Verbinding verbroken"
+  },
+  "numpad": {
+    "enter": "Invoeren",
+    "clear": "Wissen",
+    "backspace": "Verwijderen"
+  },
+  "toast": {
+    "success": "Succes",
+    "error": "Fout",
+    "warning": "Waarschuwing",
+    "info": "Informatie"
+  }
+}

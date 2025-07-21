@@ -1,63 +1,47 @@
 import { useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import homeIcon from "../assets/home.svg";
 import dropletBlue from "../assets/droplet-blue.svg";
 import dropletYellow from "../assets/droplet-yellow.svg";
 import dropletsBlue from "../assets/droplets-blue.svg";
 import dropletsYellow from "../assets/droplets-yellow.svg";
 import { useToast } from "../contexts/useToast";
-import { useLanguage } from "../contexts/useLanguage";
 import { useState } from "react";
 
 const BG = "bg-[#BDE6F3]";
 
 const testList = [
   {
-    label: {
-      en: "Test 3-4-5",
-      es: "Probar 3-4-5",
-    },
+    labelKey: "testSyringe.test345",
     sub: "SINGOL",
     icon: dropletBlue,
   },
   {
-    label: {
-      en: "Test 1-2",
-      es: "Probar 1-2",
-    },
+    labelKey: "testSyringe.test12",
     sub: "SINGOL",
     icon: dropletYellow,
   },
   {
-    label: {
-      en: "Test 3-4-5",
-      es: "Probar 3-4-5",
-    },
+    labelKey: "testSyringe.test345",
     sub: "DOSE",
     icon: dropletsBlue,
   },
   {
-    label: {
-      en: "Test 1-2",
-      es: "Probar 1-2",
-    },
+    labelKey: "testSyringe.test12",
     sub: "DOSE",
     icon: dropletsYellow,
   },
 ];
 
 const TestSyringe = () => {
+  const { t } = useTranslation();
   const navigate = useNavigate();
   const { showToast } = useToast();
-  const { selectedLanguage } = useLanguage();
   const [disabled, setDisabled] = useState(false);
 
   const handleTestClick = async (item: (typeof testList)[number]) => {
     showToast({
-      message: `${
-        selectedLanguage.code === "en" ? "Starting test" : "Iniciando prueba"
-      }: ${item.label[selectedLanguage.code as keyof typeof item.label]} (${
-        item.sub
-      })`,
+      message: `${t('testSyringe.startingTest')}: ${t(item.labelKey)} (${item.sub})`,
       type: "info",
       duration: 2000,
       position: "bottom-center",
@@ -69,11 +53,7 @@ const TestSyringe = () => {
     );
 
     showToast({
-      message: `${
-        selectedLanguage.code === "en" ? "Test completed" : "Prueba completada"
-      }: ${item.label[selectedLanguage.code as keyof typeof item.label]} (${
-        item.sub
-      })`,
+      message: `${t('testSyringe.testCompleted')}: ${t(item.labelKey)} (${item.sub})`,
       type: "success",
       duration: 2000,
       position: "bottom-center",
@@ -95,7 +75,7 @@ const TestSyringe = () => {
           <img src={homeIcon} alt="Home" className="w-16 h-16" />
         </button>
         <span className="text-5xl font-extrabold text-gray-900 tracking-wide mx-auto select-none">
-          {selectedLanguage.code === "en" ? "TEST SYRINGE" : "PROBAR JERINGA"}
+          {t('testSyringe.title')}
         </span>
         <span className="w-24"></span>
       </div>
@@ -124,7 +104,7 @@ const TestSyringe = () => {
             >
               <div>
                 <div className="text-2xl font-extrabold">
-                  {item.label[selectedLanguage.code as keyof typeof item.label]}
+                  {t(item.labelKey)}
                 </div>
                 <div className="text-xl text-gray-600 font-normal mt-1">
                   {item.sub}

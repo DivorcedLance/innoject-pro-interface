@@ -1,0 +1,100 @@
+{
+  "common": {
+    "home": "主页",
+    "settings": "设置",
+    "language": "语言",
+    "wifi": "WiFi",
+    "test": "测试",
+    "syringe": "注射器",
+    "save": "保存",
+    "cancel": "取消",
+    "reset": "重置",
+    "back": "返回",
+    "next": "下一步",
+    "previous": "上一步",
+    "confirm": "确认",
+    "close": "关闭",
+    "clear": "清除",
+    "start": "开始",
+    "page": "页面"
+  },
+  "home": {
+    "title": "Innoject Pro",
+    "partialCounter": "部分计数器",
+    "dailyCounter": "日计数器",
+    "totalCounter": "总计数器",
+    "injectionReached": "已达到{{count}}次注射"
+  },
+  "settings": {
+    "title": "设置",
+    "accessTitle": "访问设置",
+    "enterPassword": "输入密码",
+    "passwordIncorrect": "密码错误",
+    "buzzer": "蜂鸣器",
+    "cycleCounter": "循环计数器",
+    "dailyCounter": "日计数器",
+    "delayClosingDropChute": "落料槽关闭延迟",
+    "delayInjectionOily": "油性疫苗注射延迟 1-2",
+    "delayInjectionWaterBase": "水基喷雾注射延迟 3-4-5",
+    "delayNeedlesExit": "针头退出延迟",
+    "delayPress": "压机延迟",
+    "disinfectionCycle": "消毒周期",
+    "disinfectionTimer": "消毒计时器",
+    "enableSyringes12": "启用注射器 1-2",
+    "enableSyringes345": "启用注射器 3-4-5",
+    "chickensPerBox": "每箱鸡只数量",
+    "partialCounter": "部分计数器",
+    "setupConfiguration": "安装配置",
+    "startDisinfection": "开始消毒",
+    "syringesCleaning": "注射器清洁",
+    "syringesTest": "注射器测试",
+    "timeClosingDropChute": "落料槽关闭时间",
+    "timingInjection12": "注射时间 1-2",
+    "timingInjection345": "注射时间 3-4-5",
+    "totalCounter": "总计数器",
+    "needlesDisinfection": "针头消毒",
+    "shots": "次",
+    "timeCycle": "时间周期",
+    "disinfectionCycles": "消毒周期",
+    "settingsSaved": "设置已成功保存",
+    "disinfectionStarted": "消毒已开始",
+    "disinfectionCompleted": "消毒已完成"
+  },
+  "language": {
+    "title": "语言设置",
+    "select": "选择语言",
+    "changed": "语言已更改为{{language}}"
+  },
+  "testSyringe": {
+    "title": "注射器测试",
+    "instructions": "按测试按钮检查注射器功能",
+    "testButton": "测试注射器",
+    "testing": "测试中...",
+    "success": "测试成功完成",
+    "error": "测试失败",
+    "test12": "测试 1-2",
+    "test345": "测试 3-4-5",
+    "startingTest": "开始测试",
+    "testCompleted": "测试完成"
+  },
+  "wifi": {
+    "title": "WiFi设置",
+    "network": "网络",
+    "password": "密码",
+    "connect": "连接",
+    "disconnect": "断开连接",
+    "connected": "已连接",
+    "disconnected": "已断开连接"
+  },
+  "numpad": {
+    "enter": "确认",
+    "clear": "清除",
+    "backspace": "退格"
+  },
+  "toast": {
+    "success": "成功",
+    "error": "错误",
+    "warning": "警告",
+    "info": "信息"
+  }
+}

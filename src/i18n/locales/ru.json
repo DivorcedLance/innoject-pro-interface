@@ -1,0 +1,100 @@
+{
+  "common": {
+    "home": "Главная",
+    "settings": "Настройки",
+    "language": "Язык",
+    "wifi": "WiFi",
+    "test": "Тест",
+    "syringe": "Шприц",
+    "save": "Сохранить",
+    "cancel": "Отмена",
+    "reset": "Сброс",
+    "back": "Назад",
+    "next": "Далее",
+    "previous": "Предыдущий",
+    "confirm": "Подтвердить",
+    "close": "Закрыть",
+    "clear": "Очистить",
+    "start": "Начать",
+    "page": "Страница"
+  },
+  "home": {
+    "title": "Innoject Pro",
+    "partialCounter": "Частичный счетчик",
+    "dailyCounter": "Дневной счетчик",
+    "totalCounter": "Общий счетчик",
+    "injectionReached": "Достигнуто {{count}} инъекций"
+  },
+  "settings": {
+    "title": "Настройки",
+    "accessTitle": "Доступ к настройкам",
+    "enterPassword": "Введите пароль",
+    "passwordIncorrect": "Неверный пароль",
+    "buzzer": "Зуммер",
+    "cycleCounter": "Счетчик циклов",
+    "dailyCounter": "Дневной счетчик",
+    "delayClosingDropChute": "Задержка закрытия желоба",
+    "delayInjectionOily": "Задержка инъекции масляной вакцины 1-2",
+    "delayInjectionWaterBase": "Задержка водной инъекции 3-4-5",
+    "delayNeedlesExit": "Задержка выхода игл",
+    "delayPress": "Задержка пресса",
+    "disinfectionCycle": "Цикл дезинфекции",
+    "disinfectionTimer": "Таймер дезинфекции",
+    "enableSyringes12": "Включить шприцы 1-2",
+    "enableSyringes345": "Включить шприцы 3-4-5",
+    "chickensPerBox": "Цыплят в коробке",
+    "partialCounter": "Частичный счетчик",
+    "setupConfiguration": "Конфигурация установки",
+    "startDisinfection": "Начать дезинфекцию",
+    "syringesCleaning": "Очистка шприцев",
+    "syringesTest": "Тест шприцев",
+    "timeClosingDropChute": "Время закрытия желоба",
+    "timingInjection12": "Время инъекции 1-2",
+    "timingInjection345": "Время инъекции 3-4-5",
+    "totalCounter": "Общий счетчик",
+    "needlesDisinfection": "Дезинфекция игл",
+    "shots": "раз",
+    "timeCycle": "Временной цикл",
+    "disinfectionCycles": "Циклы дезинфекции",
+    "settingsSaved": "Настройки успешно сохранены",
+    "disinfectionStarted": "Дезинфекция начата",
+    "disinfectionCompleted": "Дезинфекция завершена"
+  },
+  "language": {
+    "title": "Настройки языка",
+    "select": "Выберите язык",
+    "changed": "Язык изменен на {{language}}"
+  },
+  "testSyringe": {
+    "title": "Тест шприцев",
+    "instructions": "Нажмите кнопку тестирования для проверки функций шприца",
+    "testButton": "Тестировать шприц",
+    "testing": "Тестирование...",
+    "success": "Тест успешно завершен",
+    "error": "Тест не пройден",
+    "test12": "Тест 1-2",
+    "test345": "Тест 3-4-5",
+    "startingTest": "Начало теста",
+    "testCompleted": "Тест завершен"
+  },
+  "wifi": {
+    "title": "Настройки WiFi",
+    "network": "Сеть",
+    "password": "Пароль",
+    "connect": "Подключить",
+    "disconnect": "Отключить",
+    "connected": "Подключено",
+    "disconnected": "Отключено"
+  },
+  "numpad": {
+    "enter": "Ввод",
+    "clear": "Очистить",
+    "backspace": "Удалить"
+  },
+  "toast": {
+    "success": "Успех",
+    "error": "Ошибка",
+    "warning": "Предупреждение",
+    "info": "Информация"
+  }
+}

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import { useNumpad } from "../contexts/useNumpad";
 import { useNavigate } from "react-router-dom";
 
@@ -11,7 +12,6 @@ import playIcon from "../assets/play.svg";
 import playWhiteIcon from "../assets/play-white.svg";
 import { useToast } from "../contexts/useToast";
 import { CheckCircle } from "lucide-react";
-import { useLanguage } from "../contexts/useLanguage";
 import { settingIcons } from "../components/icons/SettingsIcons";
 
 const BG = "bg-[#BDE6F3]";
@@ -31,10 +31,7 @@ const INPUT_SIZE = "w-[140px] h-[100px] text-4xl";
 const CORRECT_PASSWORD = "1234";
 
 type Setting = {
-  label: {
-    en: string;
-    es: string;
-  };
+  labelKey: string;
   suffix?: string;
   value: string;
   setValue: (v: string) => void;
@@ -53,10 +50,7 @@ const page1Settings = (
   setShots4: (v: string) => void
 ): Setting[] => [
   {
-    label: {
-      en: "Delay Press",
-      es: "Retraso Presionar",
-    },
+    labelKey: "settings.delayPress",
     suffix: "Sec.",
     value: shots1,
     setValue: setShots1,
@@ -64,10 +58,7 @@ const page1Settings = (
     icon: settingIcons.delayPress,
   },
   {
-    label: {
-      en: "Delay Injection Only Vacc. 1-2",
-      es: "Retraso Inyección Solo Vac. 1-2",
-    },
+    labelKey: "settings.delayInjectionOily",
     suffix: "Sec.",
     value: shots2,
     setValue: setShots2,
@@ -75,10 +66,7 @@ const page1Settings = (
     icon: settingIcons.delayInjectionOily,
   },
   {
-    label: {
-      en: "Delay Injection Water Base/ Spray 3-4-5",
-      es: "Retraso Inyección Agua Base/ Spray 3-4-5",
-    },
+    labelKey: "settings.delayInjectionWaterBase",
     suffix: "Sec.",
     value: shots3,
     setValue: setShots3,
@@ -86,10 +74,7 @@ const page1Settings = (
     icon: settingIcons.delayInjectionWater,
   },
   {
-    label: {
-      en: "Timing Injection 1-2",
-      es: "Temporización Inyección 1-2",
-    },
+    labelKey: "settings.timingInjection12",
     suffix: "Sec.",
     value: shots4,
     setValue: setShots4,
@@ -109,10 +94,7 @@ const page2Settings = (
   setShots8: (v: string) => void
 ): Setting[] => [
   {
-    label: {
-      en: "Timing Injection 3-4-5",
-      es: "Temporización Inyección 3-4-5",
-    },
+    labelKey: "settings.timingInjection345",
     suffix: "Sec.",
     value: shots5,
     setValue: setShots5,
@@ -120,10 +102,7 @@ const page2Settings = (
     icon: settingIcons.timingInjection345,
   },
   {
-    label: {
-      en: "Delay Needles Exit",
-      es: "Retraso Salida Agujas",
-    },
+    labelKey: "settings.delayNeedlesExit",
     suffix: "Sec.",
     value: shots6,
     setValue: setShots6,
@@ -131,10 +110,7 @@ const page2Settings = (
     icon: settingIcons.delayNeedles,
   },
   {
-    label: {
-      en: "Buzzer",
-      es: "Zumbador",
-    },
+    labelKey: "settings.buzzer",
     suffix: "Sec.",
     value: shots7,
     setValue: setShots7,
@@ -142,10 +118,7 @@ const page2Settings = (
     icon: settingIcons.buzzer,
   },
   {
-    label: {
-      en: "Delay Closing Drop Chute",
-      es: "Retraso Cierre Canalón",
-    },
+    labelKey: "settings.delayClosingDropChute",
     suffix: "Sec.",
     value: shots8,
     setValue: setShots8,
@@ -161,10 +134,7 @@ const page3Settings = (
   setShots10: (v: string) => void
 ): Setting[] => [
   {
-    label: {
-      en: "Time Closing Drop Chute",
-      es: "Retraso Cierre Canalón",
-    },
+    labelKey: "settings.timeClosingDropChute",
     suffix: "Sec.",
     value: shots9,
     setValue: setShots9,
@@ -172,10 +142,7 @@ const page3Settings = (
     icon: settingIcons.timeClosing,
   },
   {
-    label: {
-      en: "Number Chicks Per Box",
-      es: "Número de Pollitos Por Caja",
-    },
+    labelKey: "settings.chickensPerBox",
     suffix: "Sec.",
     value: shots10,
     setValue: setShots10,
@@ -185,8 +152,8 @@ const page3Settings = (
 ];
 
 const Settings = () => {
+  const { t } = useTranslation();
   const { showToast } = useToast();
-  const { selectedLanguage } = useLanguage();
   const navigate = useNavigate();
   const { openNumpad } = useNumpad();
 
@@ -237,7 +204,7 @@ const Settings = () => {
       setIsAuthenticated(true);
       setPasswordError("");
     } else {
-      setPasswordError("Contraseña incorrecta");
+      setPasswordError(t('settings.passwordIncorrect'));
       setPassword(""); // Limpiar campo
     }
   };
@@ -260,9 +227,7 @@ const Settings = () => {
             </button>
           </div>
           <span className="text-5xl font-extrabold text-gray-900 tracking-wide mx-auto">
-            {selectedLanguage.code === "en"
-              ? "ACCESS TO SETTINGS"
-              : "ACCESO A CONFIGURACIÓN"}
+            {t('settings.accessTitle')}
           </span>
           <div className="flex flex-row items-center gap-8">
             {/* Espacio para mantener centrado el título */}
@@ -279,9 +244,7 @@ const Settings = () => {
 
             {/* Título */}
             <h2 className="text-4xl font-bold text-gray-800 mb-4">
-              {selectedLanguage.code === "en"
-                ? "Enter Password"
-                : "Ingrese la Contraseña"}
+              {t('settings.enterPassword')}
             </h2>
 
             {/* Campo de contraseña */}
@@ -317,7 +280,7 @@ const Settings = () => {
                   onClick={verifyPassword}
                   className="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-8 rounded-full text-xl transition-colors"
                 >
-                  {selectedLanguage.code === "en" ? "CONFIRM" : "CONFIRMAR"}
+                  {t('common.confirm')}
                 </button>
                 <button
                   onClick={() => {
@@ -326,7 +289,7 @@ const Settings = () => {
                   }}
                   className="bg-gray-500 hover:bg-gray-600 text-white font-bold py-3 px-8 rounded-full text-xl transition-colors"
                 >
-                  {selectedLanguage.code === "en" ? "CLEAR" : "LIMPIAR"}
+                  {t('common.clear')}
                 </button>
               </div>
             </div>
@@ -378,10 +341,7 @@ const Settings = () => {
 
   const startDesinfection = () => {
     showToast({
-      message:
-        selectedLanguage.code === "en"
-          ? "Disinfection started"
-          : "Desinfección iniciada",
+      message: t('settings.disinfectionStarted'),
       icon: CheckCircle,
       type: "success",
       duration: 2000,
@@ -390,10 +350,7 @@ const Settings = () => {
 
     setTimeout(() => {
       showToast({
-        message:
-          selectedLanguage.code === "en"
-            ? "Disinfection completed"
-            : "Desinfección completada",
+        message: t('settings.disinfectionCompleted'),
         icon: CheckCircle,
         type: "success",
         duration: 2000,
@@ -407,15 +364,11 @@ const Settings = () => {
       case 1:
       case 2:
       case 3:
-        return selectedLanguage.code === "en"
-          ? `SETUP - PAGE ${page}`
-          : `CONFIGURACIÓN - PÁGINA ${page}`;
+        return t('settings.title') + ` - ${t('common.page')} ${page}`;
       case 4:
-        return selectedLanguage.code === "en"
-          ? "NEEDLES DISINFECTION"
-          : "DESINFECCIÓN DE AGUJAS";
+        return t('settings.needlesDisinfection');
       default:
-        return "SETUP";
+        return t('settings.title');
     }
   };
 
@@ -463,7 +416,7 @@ const Settings = () => {
               <div key={idx} className="relative">
                 <div className={BOX}>
                   <div className="w-[40%] pr-4">
-                    <img src={setting.icon || ""} alt={setting.label.en} />
+                    <img src={setting.icon || ""} alt={t(setting.labelKey)} />
                   </div>
                   <div className="flex flex-col items-center gap-3 mt-2 w-[60%]">
                     <input
@@ -499,21 +452,13 @@ const Settings = () => {
             <>
               <div className="flex flex-row gap-16 mx-auto my-6">
                 <SettingSwitch
-                  label={
-                    selectedLanguage.code === "en"
-                      ? "Enable Injection 1-2"
-                      : "Habilitar Inyección 1-2"
-                  }
+                  label={t('settings.enableSyringes12')}
                   checked={enable1}
                   onChange={setEnable1}
                   icon={settingIcons.habilitarJeringas12}
                 />
                 <SettingSwitch
-                  label={
-                    selectedLanguage.code === "en"
-                      ? "Enable Injection 3-4-5"
-                      : "Habilitar Inyección 3-4-5"
-                  }
+                  label={t('settings.enableSyringes345')}
                   checked={enable2}
                   onChange={setEnable2}
                   icon={settingIcons.habilitarJeringas345}
@@ -626,9 +571,7 @@ const Settings = () => {
               >
                 <img src={playWhiteIcon} alt="Test" className="w-14 h-14" />
                 <span className="text-3xl text-white font-bold tracking-wider">
-                  {selectedLanguage.code === "en"
-                    ? "Start Disinfection"
-                    : "Iniciar Desinfección"}
+                  {t('settings.startDisinfection')}
                 </span>
               </button>
             </div>
@@ -666,7 +609,7 @@ const Settings = () => {
                   />
                 </div>
                 <span className="text-2xl font-normal">
-                  {selectedLanguage.code === "en" ? "shots" : "disparos"}
+                  {t('settings.shots')}
                 </span>
               </div>
               <button
@@ -680,7 +623,7 @@ const Settings = () => {
                 onClick={() => {}}
               >
                 <span className="mr-6 ml-4">
-                  {selectedLanguage.code === "en" ? "START" : "INICIAR"}
+                  {t('common.start')}
                 </span>
                 <img src={playIcon} alt="Start" className="w-10 h-10" />
               </button>

@@ -1,0 +1,100 @@
+{
+  "common": {
+    "home": "홈",
+    "settings": "설정",
+    "language": "언어",
+    "wifi": "WiFi",
+    "test": "테스트",
+    "syringe": "주사기",
+    "save": "저장",
+    "cancel": "취소",
+    "reset": "재설정",
+    "back": "뒤로",
+    "next": "다음",
+    "previous": "이전",
+    "confirm": "확인",
+    "close": "닫기",
+    "clear": "지우기",
+    "start": "시작",
+    "page": "페이지"
+  },
+  "home": {
+    "title": "Innoject Pro",
+    "partialCounter": "부분 카운터",
+    "dailyCounter": "일일 카운터",
+    "totalCounter": "총 카운터",
+    "injectionReached": "{{count}}회 주사에 도달했습니다"
+  },
+  "settings": {
+    "title": "설정",
+    "accessTitle": "설정 접근",
+    "enterPassword": "비밀번호 입력",
+    "passwordIncorrect": "비밀번호가 틀렸습니다",
+    "buzzer": "부저",
+    "cycleCounter": "사이클 카운터",
+    "dailyCounter": "일일 카운터",
+    "delayClosingDropChute": "낙하 슈트 닫기 지연",
+    "delayInjectionOily": "오일 백신 주사 지연 1-2",
+    "delayInjectionWaterBase": "수성 베이스 스프레이 주사 지연 3-4-5",
+    "delayNeedlesExit": "바늘 출구 지연",
+    "delayPress": "프레스 지연",
+    "disinfectionCycle": "소독 사이클",
+    "disinfectionTimer": "소독 타이머",
+    "enableSyringes12": "주사기 1-2 활성화",
+    "enableSyringes345": "주사기 3-4-5 활성화",
+    "chickensPerBox": "박스당 닭 수",
+    "partialCounter": "부분 카운터",
+    "setupConfiguration": "설치 구성",
+    "startDisinfection": "소독 시작",
+    "syringesCleaning": "주사기 청소",
+    "syringesTest": "주사기 테스트",
+    "timeClosingDropChute": "낙하 슈트 닫기 시간",
+    "timingInjection12": "주사 타이밍 1-2",
+    "timingInjection345": "주사 타이밍 3-4-5",
+    "totalCounter": "총 카운터",
+    "needlesDisinfection": "바늘 소독",
+    "shots": "샷",
+    "timeCycle": "시간 사이클",
+    "disinfectionCycles": "소독 사이클",
+    "settingsSaved": "설정이 성공적으로 저장되었습니다",
+    "disinfectionStarted": "소독이 시작되었습니다",
+    "disinfectionCompleted": "소독이 완료되었습니다"
+  },
+  "language": {
+    "title": "언어 설정",
+    "select": "언어 선택",
+    "changed": "언어가 {{language}}로 변경되었습니다"
+  },
+  "testSyringe": {
+    "title": "주사기 테스트",
+    "instructions": "테스트 버튼을 눌러 주사기 기능을 확인하세요",
+    "testButton": "주사기 테스트",
+    "testing": "테스트 중...",
+    "success": "테스트가 성공적으로 완료되었습니다",
+    "error": "테스트에 실패했습니다",
+    "test12": "테스트 1-2",
+    "test345": "테스트 3-4-5",
+    "startingTest": "테스트 시작",
+    "testCompleted": "테스트 완료"
+  },
+  "wifi": {
+    "title": "WiFi 설정",
+    "network": "네트워크",
+    "password": "비밀번호",
+    "connect": "연결",
+    "disconnect": "연결 해제",
+    "connected": "연결됨",
+    "disconnected": "연결 해제됨"
+  },
+  "numpad": {
+    "enter": "입력",
+    "clear": "지우기",
+    "backspace": "백스페이스"
+  },
+  "toast": {
+    "success": "성공",
+    "error": "오류",
+    "warning": "경고",
+    "info": "정보"
+  }
+}

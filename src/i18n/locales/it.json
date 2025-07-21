@@ -1,0 +1,100 @@
+{
+  "common": {
+    "home": "Home",
+    "settings": "Impostazioni",
+    "language": "Lingua",
+    "wifi": "WiFi",
+    "test": "Test",
+    "syringe": "Siringa",
+    "save": "Salva",
+    "cancel": "Annulla",
+    "reset": "Ripristina",
+    "back": "Indietro",
+    "next": "Avanti",
+    "previous": "Precedente",
+    "confirm": "Conferma",
+    "close": "Chiudi",
+    "clear": "Cancella",
+    "start": "Avvia",
+    "page": "PAGINA"
+  },
+  "home": {
+    "title": "Innoject Pro",
+    "partialCounter": "Contatore Parziale",
+    "dailyCounter": "Contatore Giornaliero",
+    "totalCounter": "Contatore Totale",
+    "injectionReached": "Raggiunte {{count}} iniezioni"
+  },
+  "settings": {
+    "title": "Impostazioni",
+    "accessTitle": "ACCESSO ALLE IMPOSTAZIONI",
+    "enterPassword": "Inserisci Password",
+    "passwordIncorrect": "Password errata",
+    "buzzer": "Cicalino",
+    "cycleCounter": "Contatore Cicli",
+    "dailyCounter": "Contatore Giornaliero",
+    "delayClosingDropChute": "Ritardo Chiusura Scivolo",
+    "delayInjectionOily": "Ritardo Iniezione Vaccino Oleoso 1-2",
+    "delayInjectionWaterBase": "Ritardo Iniezione Base Acqua Spray 3-4-5",
+    "delayNeedlesExit": "Ritardo Uscita Aghi",
+    "delayPress": "Ritardo Pressa",
+    "disinfectionCycle": "Ciclo di Disinfezione",
+    "disinfectionTimer": "Timer Disinfezione",
+    "enableSyringes12": "Abilita Siringhe 1-2",
+    "enableSyringes345": "Abilita Siringhe 3-4-5",
+    "chickensPerBox": "Numero di Polli per Scatola",
+    "partialCounter": "Contatore Parziale",
+    "setupConfiguration": "Configurazione Setup",
+    "startDisinfection": "Avvia Disinfezione",
+    "syringesCleaning": "Pulizia Siringhe",
+    "syringesTest": "Test Siringhe",
+    "timeClosingDropChute": "Tempo Chiusura Scivolo",
+    "timingInjection12": "Temporizzazione Iniezione 1-2",
+    "timingInjection345": "Temporizzazione Iniezione 3-4-5",
+    "totalCounter": "Contatore Totale",
+    "needlesDisinfection": "Disinfezione Aghi",
+    "shots": "colpi",
+    "timeCycle": "Ciclo Temporale",
+    "disinfectionCycles": "Cicli di Disinfezione",
+    "settingsSaved": "Impostazioni salvate con successo",
+    "disinfectionStarted": "Disinfezione avviata",
+    "disinfectionCompleted": "Disinfezione completata"
+  },
+  "language": {
+    "title": "Impostazioni Lingua",
+    "select": "Seleziona Lingua",
+    "changed": "Lingua cambiata in {{language}}"
+  },
+  "testSyringe": {
+    "title": "Test Siringa",
+    "instructions": "Premi il pulsante di test per verificare la funzionalità della siringa",
+    "testButton": "Testa Siringhe",
+    "testing": "Test in corso...",
+    "success": "Test completato con successo",
+    "error": "Test fallito",
+    "test12": "Test 1-2",
+    "test345": "Test 3-4-5",
+    "startingTest": "Avvio test",
+    "testCompleted": "Test completato"
+  },
+  "wifi": {
+    "title": "Impostazioni WiFi",
+    "network": "Rete",
+    "password": "Password",
+    "connect": "Connetti",
+    "disconnect": "Disconnetti",
+    "connected": "Connesso",
+    "disconnected": "Disconnesso"
+  },
+  "numpad": {
+    "enter": "Invio",
+    "clear": "Cancella",
+    "backspace": "Backspace"
+  },
+  "toast": {
+    "success": "Successo",
+    "error": "Errore",
+    "warning": "Avviso",
+    "info": "Informazione"
+  }
+}

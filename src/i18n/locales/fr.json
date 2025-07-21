@@ -1,0 +1,100 @@
+{
+  "common": {
+    "home": "Accueil",
+    "settings": "Paramètres",
+    "language": "Langue",
+    "wifi": "WiFi",
+    "test": "Test",
+    "syringe": "Seringue",
+    "save": "Enregistrer",
+    "cancel": "Annuler",
+    "reset": "Réinitialiser",
+    "back": "Retour",
+    "next": "Suivant",
+    "previous": "Précédent",
+    "confirm": "Confirmer",
+    "close": "Fermer",
+    "clear": "Effacer",
+    "start": "Démarrer",
+    "page": "PAGE"
+  },
+  "home": {
+    "title": "Innoject Pro",
+    "partialCounter": "Compteur Partiel",
+    "dailyCounter": "Compteur Quotidien",
+    "totalCounter": "Compteur Total",
+    "injectionReached": "{{count}} injections atteintes"
+  },
+  "settings": {
+    "title": "Paramètres",
+    "accessTitle": "ACCÈS AUX PARAMÈTRES",
+    "enterPassword": "Entrez le mot de passe",
+    "passwordIncorrect": "Mot de passe incorrect",
+    "buzzer": "Buzzer",
+    "cycleCounter": "Compteur de Cycles",
+    "dailyCounter": "Compteur Quotidien",
+    "delayClosingDropChute": "Retard Fermeture Goulotte",
+    "delayInjectionOily": "Retard Injection Vaccin Huileux 1-2",
+    "delayInjectionWaterBase": "Retard Injection Base Eau Spray 3-4-5",
+    "delayNeedlesExit": "Retard Sortie Aiguilles",
+    "delayPress": "Retard Presse",
+    "disinfectionCycle": "Cycle de Désinfection",
+    "disinfectionTimer": "Minuteur de Désinfection",
+    "enableSyringes12": "Activer Seringues 1-2",
+    "enableSyringes345": "Activer Seringues 3-4-5",
+    "chickensPerBox": "Nombre de Poulets par Boîte",
+    "partialCounter": "Compteur Partiel",
+    "setupConfiguration": "Configuration d'Installation",
+    "startDisinfection": "Démarrer Désinfection",
+    "syringesCleaning": "Nettoyage des Seringues",
+    "syringesTest": "Test des Seringues",
+    "timeClosingDropChute": "Temps Fermeture Goulotte",
+    "timingInjection12": "Temporisation Injection 1-2",
+    "timingInjection345": "Temporisation Injection 3-4-5",
+    "totalCounter": "Compteur Total",
+    "needlesDisinfection": "Désinfection des Aiguilles",
+    "shots": "coups",
+    "timeCycle": "Temps de Cycle",
+    "disinfectionCycles": "Cycles de Désinfection",
+    "settingsSaved": "Paramètres enregistrés avec succès",
+    "disinfectionStarted": "Désinfection démarrée",
+    "disinfectionCompleted": "Désinfection terminée"
+  },
+  "language": {
+    "title": "Paramètres de Langue",
+    "select": "Sélectionner la Langue",
+    "changed": "Langue changée en {{language}}"
+  },
+  "testSyringe": {
+    "title": "Test de Seringue",
+    "instructions": "Appuyez sur le bouton de test pour vérifier la fonctionnalité de la seringue",
+    "testButton": "Tester les Seringues",
+    "testing": "Test en cours...",
+    "success": "Test terminé avec succès",
+    "error": "Test échoué",
+    "test12": "Tester 1-2",
+    "test345": "Tester 3-4-5",
+    "startingTest": "Démarrage du test",
+    "testCompleted": "Test terminé"
+  },
+  "wifi": {
+    "title": "Paramètres WiFi",
+    "network": "Réseau",
+    "password": "Mot de passe",
+    "connect": "Connecter",
+    "disconnect": "Déconnecter",
+    "connected": "Connecté",
+    "disconnected": "Déconnecté"
+  },
+  "numpad": {
+    "enter": "Entrée",
+    "clear": "Effacer",
+    "backspace": "Retour arrière"
+  },
+  "toast": {
+    "success": "Succès",
+    "error": "Erreur",
+    "warning": "Avertissement",
+    "info": "Information"
+  }
+}

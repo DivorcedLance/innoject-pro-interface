@@ -1,0 +1,100 @@
+{
+  "common": {
+    "home": "Hem",
+    "settings": "Inställningar",
+    "language": "Språk",
+    "wifi": "WiFi",
+    "test": "Test",
+    "syringe": "Spruta",
+    "save": "Spara",
+    "cancel": "Avbryt",
+    "reset": "Återställ",
+    "back": "Tillbaka",
+    "next": "Nästa",
+    "previous": "Föregående",
+    "confirm": "Bekräfta",
+    "close": "Stäng",
+    "clear": "Rensa",
+    "start": "Starta",
+    "page": "Sida"
+  },
+  "home": {
+    "title": "Innoject Pro",
+    "partialCounter": "Delräknare",
+    "dailyCounter": "Daglig räknare",
+    "totalCounter": "Total räknare",
+    "injectionReached": "{{count}} injektioner nådda"
+  },
+  "settings": {
+    "title": "Inställningar",
+    "accessTitle": "Åtkomst till inställningar",
+    "enterPassword": "Ange lösenord",
+    "passwordIncorrect": "Felaktigt lösenord",
+    "buzzer": "Summer",
+    "cycleCounter": "Cykelräknare",
+    "dailyCounter": "Daglig räknare",
+    "delayClosingDropChute": "Fördröjning stängning fallrör",
+    "delayInjectionOily": "Fördröjning oljigt vaccin injektion 1-2",
+    "delayInjectionWaterBase": "Fördröjning vattenbaserad spray 3-4-5",
+    "delayNeedlesExit": "Fördröjning nålutgång",
+    "delayPress": "Fördröjning press",
+    "disinfectionCycle": "Desinfektionscykel",
+    "disinfectionTimer": "Desinfektionstimer",
+    "enableSyringes12": "Aktivera sprutor 1-2",
+    "enableSyringes345": "Aktivera sprutor 3-4-5",
+    "chickensPerBox": "Kycklingar per låda",
+    "partialCounter": "Delräknare",
+    "setupConfiguration": "Installationskonfiguration",
+    "startDisinfection": "Starta desinfektion",
+    "syringesCleaning": "Sprutrengöring",
+    "syringesTest": "Spruttest",
+    "timeClosingDropChute": "Tid stängning fallrör",
+    "timingInjection12": "Timing injektion 1-2",
+    "timingInjection345": "Timing injektion 3-4-5",
+    "totalCounter": "Total räknare",
+    "needlesDisinfection": "Nåldesinfektion",
+    "shots": "gånger",
+    "timeCycle": "Tidscykel",
+    "disinfectionCycles": "Desinfektionscykler",
+    "settingsSaved": "Inställningar sparade framgångsrikt",
+    "disinfectionStarted": "Desinfektion startad",
+    "disinfectionCompleted": "Desinfektion slutförd"
+  },
+  "language": {
+    "title": "Språkinställningar",
+    "select": "Välj språk",
+    "changed": "Språk ändrat till {{language}}"
+  },
+  "testSyringe": {
+    "title": "Spruttest",
+    "instructions": "Tryck på testknappen för att kontrollera sprutfunktioner",
+    "testButton": "Testa spruta",
+    "testing": "Testar...",
+    "success": "Test slutfört framgångsrikt",
+    "error": "Test misslyckades",
+    "test12": "Test 1-2",
+    "test345": "Test 3-4-5",
+    "startingTest": "Startar test",
+    "testCompleted": "Test slutfört"
+  },
+  "wifi": {
+    "title": "WiFi-inställningar",
+    "network": "Nätverk",
+    "password": "Lösenord",
+    "connect": "Anslut",
+    "disconnect": "Koppla från",
+    "connected": "Ansluten",
+    "disconnected": "Frånkopplad"
+  },
+  "numpad": {
+    "enter": "Ange",
+    "clear": "Rensa",
+    "backspace": "Radera"
+  },
+  "toast": {
+    "success": "Framgång",
+    "error": "Fel",
+    "warning": "Varning",
+    "info": "Information"
+  }
+}
