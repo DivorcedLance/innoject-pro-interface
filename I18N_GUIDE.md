@@ -1,20 +1,26 @@
 # Internationalization (i18n) Implementation
 
-Este proyecto ahora incluye un sistema completo de internacionalización usando `react-i18next`.
+Este proyecto ahora incluye un sistema completo de internacionalización usando `react-i18next` con soporte para **12 idiomas**.
 
-## Estructura
+## Estructura del Sistema i18n
 
 ```
 src/
 ├── i18n/
 │   ├── index.ts          # Configuración principal de i18n
 │   └── locales/
-│       ├── en.json       # Traducciones en inglés
-│       ├── es.json       # Traducciones en español
-│       ├── fr.json       # Traducciones en francés
-│       ├── de.json       # Traducciones en alemán
-│       ├── it.json       # Traducciones en italiano
-│       └── pt.json       # Traducciones en portugués
+│       ├── en.json       # English (Inglés) 🇺🇸
+│       ├── es.json       # Español 🇪🇸
+│       ├── fr.json       # Français (Francés) 🇫🇷
+│       ├── de.json       # Deutsch (Alemán) 🇩🇪
+│       ├── it.json       # Italiano 🇮🇹
+│       ├── pt.json       # Português (Portugués) 🇵🇹
+│       ├── nl.json       # Nederlands (Holandés) 🇳🇱
+│       ├── sv.json       # Svenska (Sueco) 🇸🇪
+│       ├── ru.json       # Русский (Ruso) 🇷🇺
+│       ├── ja.json       # 日本語 (Japonés) 🇯🇵
+│       ├── ko.json       # 한국어 (Coreano) 🇰🇷
+│       └── zh-CN.json    # 中文(简体) (Chino Simplificado) 🇨🇳
 ├── contexts/
 │   ├── LanguageContext.ts
 │   ├── LanguageProvider.tsx
@@ -148,12 +154,40 @@ Para textos con variables:
 
 ## Idiomas soportados
 
-- **English (en)**: Inglés 🇺🇸
-- **Español (es)**: Español 🇪🇸
-- **Français (fr)**: Francés 🇫🇷
-- **Deutsch (de)**: Alemán 🇩🇪
-- **Italiano (it)**: Italiano 🇮🇹
-- **Português (pt)**: Portugués 🇵🇹
+- **English (en)**: Inglés 🇺🇸 - Idioma por defecto
+- **Español (es)**: Español 🇪🇸 - Traducción completa
+- **Français (fr)**: Francés 🇫🇷 - Traducción completa
+- **Deutsch (de)**: Alemán 🇩🇪 - Traducción completa
+- **Italiano (it)**: Italiano 🇮🇹 - Traducción completa
+- **Português (pt)**: Portugués 🇵🇹 - Traducción completa
+- **Nederlands (nl)**: Holandés 🇳🇱 - Traducción completa
+- **Svenska (sv)**: Sueco 🇸🇪 - Traducción completa
+- **Русский (ru)**: Ruso 🇷🇺 - Traducción completa
+- **日本語 (ja)**: Japonés 🇯🇵 - Traducción completa
+- **한국어 (ko)**: Coreano 🇰🇷 - Traducción completa
+- **中文(简体) (zh-CN)**: Chino Simplificado 🇨🇳 - Traducción completa
+
+## Cobertura de Mercados Globales
+
+### 🌍 Europa Occidental
+- **Inglés**: Reino Unido, Irlanda
+- **Francés**: Francia, Bélgica, Suiza
+- **Alemán**: Alemania, Austria, Suiza
+- **Italiano**: Italia, San Marino
+- **Holandés**: Países Bajos, Bélgica
+- **Sueco**: Suecia, Finlandia
+
+### 🌍 Europa Oriental
+- **Ruso**: Rusia, Bielorrusia, Kazajistán
+
+### 🌍 América
+- **Español**: España, América Latina
+- **Portugués**: Portugal, Brasil
+
+### 🌏 Asia-Pacífico
+- **Japonés**: Japón
+- **Coreano**: Corea del Sur, Corea del Norte
+- **Chino Simplificado**: China, Singapur
 
 ## Archivos modificados
 

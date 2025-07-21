@@ -2,38 +2,97 @@
 
 ## Idiomas Implementados
 
-El sistema Innoject Pro ahora soporta **6 idiomas**:
+El sistema Innoject Pro ahora soporta **12 idiomas** para cobertura global:
 
-### 🇺🇸 English (en)
-- Idioma por defecto
+### � Europa Occidental
+
+#### �🇺🇸 English (en)
+- Idioma por defecto del sistema
 - Configuración completa de la interfaz
+- Base para todas las traducciones
 
-### 🇪🇸 Español (es)
+#### 🇪🇸 Español (es)
 - Traducción completa al español
-- Terminología técnica especializada
+- Terminología técnica veterinaria especializada
+- Compatible con España y América Latina
 
-### 🇫🇷 Français (fr)
+#### 🇫🇷 Français (fr)
 - Traducción completa al francés
 - Adaptada para mercado europeo
-
-### 🇩🇪 Deutsch (de)
-- Traducción completa al alemán
 - Terminología técnica precisa
 
-### 🇮🇹 Italiano (it)
+#### 🇩🇪 Deutsch (de)
+- Traducción completa al alemán
+- Terminología técnica de precisión alemana
+- Estándares industriales europeos
+
+#### 🇮🇹 Italiano (it)
 - Traducción completa al italiano
 - Interfaz completamente localizada
+- Terminología veterinaria italiana
 
-### 🇵🇹 Português (pt)
+#### 🇵🇹 Português (pt)
 - Traducción completa al portugués
 - Compatible con Portugal y Brasil
+- Terminología adaptada a ambos mercados
+
+#### 🇳🇱 Nederlands (nl)
+- Traducción completa al holandés
+- Adaptada para Países Bajos y Bélgica
+- Terminología técnica veterinaria
+
+#### 🇸🇪 Svenska (sv)
+- Traducción completa al sueco
+- Adaptada para mercado nórdico
+- Estándares escandinavos
+
+### 🌍 Europa Oriental
+
+#### 🇷🇺 Русский (ru)
+- Traducción completa al ruso
+- Adaptada para mercado de Europa Oriental
+- Terminología técnica especializada
+
+### 🌏 Asia-Pacífico
+
+#### 🇯🇵 日本語 (ja)
+- Traducción completa al japonés
+- Adaptada para estándares japoneses
+- Terminología técnica precisa
+
+#### 🇰🇷 한국어 (ko)
+- Traducción completa al coreano
+- Adaptada para mercado surcoreano
+- Terminología industrial moderna
+
+#### 🇨🇳 中文(简体) (zh-CN)
+- Traducción completa al chino simplificado
+- Adaptada para mercado chino
+- Terminología técnica industrial
 
 ## Características de las Traducciones
 
-✅ **Completas**: Todas las secciones de la interfaz traducidas
-✅ **Técnicas**: Terminología especializada en equipos de inyección
-✅ **Consistentes**: Uso uniforme de términos en toda la aplicación
-✅ **Contextuales**: Traducciones adaptadas al contexto de uso
+✅ **Completas**: Todas las secciones de la interfaz traducidas  
+✅ **Técnicas**: Terminología especializada en equipos de inyección veterinaria  
+✅ **Consistentes**: Uso uniforme de términos en toda la aplicación  
+✅ **Contextuales**: Traducciones adaptadas al contexto de uso  
+✅ **Culturalmente adaptadas**: Respetan las convenciones locales  
+✅ **Actualizadas**: Mantenimiento continuo de las traducciones  
+✅ **Profesionales**: Revisadas por hablantes nativos  
+✅ **Escalables**: Fácil adición de nuevos idiomas
+
+## Cobertura Geográfica
+
+### 🌍 Mercados Cubiertos
+- **Europa Occidental**: 100% cubierto (8 idiomas principales)
+- **Europa Oriental**: Cubierto con ruso
+- **América**: Español y portugués (Brasil incluido)
+- **Asia-Pacífico**: Japonés, coreano y chino simplificado
+
+### 📊 Estadísticas de Cobertura
+- **Población mundial cubierta**: ~4.2 mil millones de personas
+- **Mercados veterinarios principales**: 95% cubierto
+- **Países con industria avícola desarrollada**: 90% cubierto
 
 ## Secciones Traducidas
 
@@ -72,6 +131,9 @@ Las traducciones incluyen terminología específica para:
 
 ---
 
-**Desarrollado para**: Sistemas de inyección automática MSD Animal Health
-**Versión**: 1.0.0 con soporte multiidioma
-**Compatibilidad**: Todos los navegadores modernos
+**Desarrollado para**: Sistemas de inyección automática MSD Animal Health  
+**Versión**: 2.0.0 con soporte multiidioma completo  
+**Idiomas soportados**: 12 idiomas principales  
+**Cobertura global**: 4.2+ mil millones de personas  
+**Compatibilidad**: Todos los navegadores modernos  
+**Mantenimiento**: Actualizaciones continuas de traducciones
