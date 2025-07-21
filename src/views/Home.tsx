@@ -100,28 +100,30 @@ const Home = () => {
       </div>
 
       {/* Footer Menu */}
-      <div className="w-full bg-gray-200 flex justify-self-start gap-16 pl-16 items-center py-6">
-        <button
-          onClick={() => navigate("/settings")}
-          aria-label="Settings"
-          className="p-4 rounded focus:outline-none cursor-pointer transition-transform duration-150 hover:scale-110 active:scale-115 active:translate-y-1"
-        >
-          <img src={gearIcon} alt="Settings" className="w-20 h-20" />
-        </button>
-        {/*         <button
-          onClick={() => navigate('/wifi')}
-          aria-label="Wifi Settings"
-          className="p-4 rounded focus:outline-none cursor-pointer transition-transform duration-150 hover:scale-110 active:scale-115 active:translate-y-1"
-        >
-          <img src={wifiIcon} alt="WiFi" className="w-20 h-20" />
-        </button> */}
-        <button
-          onClick={() => navigate("/testsyringe")}
-          aria-label="Test Syringe"
-          className="p-4 rounded focus:outline-none cursor-pointer transition-transform duration-150 hover:scale-110 active:scale-115 active:translate-y-1"
-        >
-          <img src={syringeIcon} alt="Syringe" className="w-20 h-20" />
-        </button>
+      <div className="w-full bg-gray-200 flex justify-between pl-16 pr-16 items-center py-6">
+        <div className="flex gap-16">
+          <button
+            onClick={() => navigate("/settings")}
+            aria-label="Settings"
+            className="p-4 rounded focus:outline-none cursor-pointer transition-transform duration-150 hover:scale-110 active:scale-115 active:translate-y-1"
+          >
+            <img src={gearIcon} alt="Settings" className="w-20 h-20" />
+          </button>
+          {/*         <button
+            onClick={() => navigate('/wifi')}
+            aria-label="Wifi Settings"
+            className="p-4 rounded focus:outline-none cursor-pointer transition-transform duration-150 hover:scale-110 active:scale-115 active:translate-y-1"
+          >
+            <img src={wifiIcon} alt="WiFi" className="w-20 h-20" />
+          </button> */}
+          <button
+            onClick={() => navigate("/testsyringe")}
+            aria-label="Test Syringe"
+            className="p-4 rounded focus:outline-none cursor-pointer transition-transform duration-150 hover:scale-110 active:scale-115 active:translate-y-1"
+          >
+            <img src={syringeIcon} alt="Syringe" className="w-20 h-20" />
+          </button>
+        </div>
         <button
           onClick={() => navigate("/language")}
           aria-label="Language Settings"
